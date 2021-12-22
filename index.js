@@ -130,7 +130,8 @@ function nodeTag(node) {
 		return decorate({ name: 'expression', classes: ['new'] });
 	} else if (node.type === 'FunctionExpression') {
 		return decorate({ name: 'expression', classes: ['function'] });
-
+	} else if (node.type === 'ArrowFunctionExpression') {
+		return decorate({ name: 'expression', classes: ['function'] });
 	} else if (node.type === 'ReturnStatement') {
 		return decorate({ name: 'statement', classes: ['return'] });
 	} else if (node.type === 'BreakStatement') {
